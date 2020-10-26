@@ -16,6 +16,24 @@ export async function getUserInfo(username) {
     console.error(error);
   }
 } 
+
+
+export async function getUserFollowingInfo(username, pageIndex, pageSize) {
+  const followingPath = `following?page=${pageIndex}&per_page=${pageSize}`;
+  try {
+    const res = await axios.get([baseUrl, username, followingPath].join('/'), {
+      auth: {
+        username: '',
+        password: '',
+       },
+    })
+    return res;
+  } catch (error) {
+    console.error(error);
+  }
+} 
+
+
 // const getUserInfo = (username) => 
   
   // .then(function(response) {
@@ -26,23 +44,23 @@ export async function getUserInfo(username) {
   // })
 
 
-  export const getUserFollowingInfo = (username, pageIndex, pageSize) => {
-    const followingPath = `following?page=${pageIndex}&per_page=${pageSize}`;
-    return (
-      axios.get([baseUrl, username, followingPath].join('/'), {
-        auth: {
-          username: '',
-          password: '',
-         },
-      })
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-    );
-  }
+  // export const getUserFollowingInfo = (username, pageIndex, pageSize) => {
+  //   const followingPath = `following?page=${pageIndex}&per_page=${pageSize}`;
+  //   return (
+  //     axios.get([baseUrl, username, followingPath].join('/'), {
+  //       auth: {
+  //         username: '',
+  //         password: '',
+  //        },
+  //     })
+  //     .then(function(response) {
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     })
+  //   );
+  // }
 
 
   // const res = getUserInfo('luchang59');
