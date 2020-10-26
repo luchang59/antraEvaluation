@@ -6,11 +6,11 @@ export default function Header() {
   return (
     <div className='header-list'>
       <nav className='nav'>
-        <Link to="/home">HOME</Link>
-        <Link to="/following">FOLLOWING</Link>
+        {/* <Link to="/home">HOME</Link> */}
+        {/* <Link to="/following">FOLLOWING</Link> */}
+        <div id='search-bar'>
+        </div>
       </nav>
-      <>
-      </>
     </div>
   );
 }
