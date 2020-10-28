@@ -1,0 +1,18 @@
+.header-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  color: white;
+  width: 50%
+}
+
+.nav > a {
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
